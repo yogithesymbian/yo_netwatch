@@ -1,3 +1,5 @@
+![yo_netwatch](./image.png)
+
 # yo_netwatch
 
 📡 A reactive internet connection status checker for `egui` apps — inspired by Flutter's `connectivity_plus`, built with ❤️ in Rust by Yo.
@@ -19,23 +21,18 @@ yo_netwatch = "0.1"
 
 ## Short Usage
 
-```
-use yo_netwatch::{start_network_watcher, Receiver};
+```rust
+use yo_netwatch::start_network_watcher;
 
-fn main() {
-    let rx: Receiver<bool> = start_network_watcher();
-
-    loop {
-        if let Ok(status) = rx.recv() {
-            println!("Network is: {}", if status { "Online ✅" } else { "Offline ❌" });
-        }
-    }
+let rx = start_network_watcher();
+if let Ok(online) = rx.recv() {
+    println!("Status jaringan: {}", if online { "Online ✅" } else { "Offline ❌" });
 }
 ```
 
 ## Usage
 
-```
+```rust
 use eframe::egui;
 use yo_netwatch::{start_network_watcher, Receiver};
 
