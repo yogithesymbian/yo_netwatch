@@ -20,9 +20,17 @@ yo_netwatch = "0.1"
 ## Usage
 
 ```
-use yo_netwatch::start_network_watcher;
+use yo_netwatch::{start_network_watcher, Receiver};
 
-let rx = start_network_watcher(); // returns crossbeam_channel::Receiver<bool>
+fn main() {
+    let rx: Receiver<bool> = start_network_watcher();
+
+    loop {
+        if let Ok(status) = rx.recv() {
+            println!("Network is: {}", if status { "Online ✅" } else { "Offline ❌" });
+        }
+    }
+}
 ```
 
 ## License
