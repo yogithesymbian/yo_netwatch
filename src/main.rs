@@ -1,5 +1,5 @@
 use eframe::egui;
-use egui_network_status::{Receiver, start_network_watcher};
+use yo_netwatch::{Receiver, start_network_watcher};
 
 fn main() -> Result<(), eframe::Error> {
     eframe::run_native(
