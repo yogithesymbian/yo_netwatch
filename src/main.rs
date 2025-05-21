@@ -1,6 +1,5 @@
-use crossbeam_channel::Receiver;
 use eframe::egui;
-use egui_network_status::start_network_watcher;
+use egui_network_status::{Receiver, start_network_watcher};
 
 fn main() -> Result<(), eframe::Error> {
     eframe::run_native(
