@@ -1,0 +1,16 @@
+[package]
+name = "yo_netwatch"
+version = "0.1.0"
+edition = "2024"
+authors = ["Yogi Arif Widodo <yogiarifwidodo@icloud.com>"]
+description = "A reactive network status monitor for egui apps. Inspired by Flutter's connectivity_plus, built with Rust by Yo (Yogi)."
+license = "MIT"
+repository = "https://github.com/yogithesymbian/yo_netwatch"
+homepage = "https://github.com/yogithesymbian/yo_netwatch"
+keywords = ["network", "connectivity", "egui", "desktop", "status"]
+categories = ["network-programming", "gui", "visualization", "rust-patterns"]
+readme = "README.md"
+
+[dependencies]
+eframe = "0.25"
+crossbeam-channel = "0.5"
