@@ -11,6 +11,14 @@ keywords = ["network", "connectivity", "egui", "desktop", "status"]
 categories = ["network-programming", "gui", "visualization", "rust-patterns"]
 readme = "README.md"
 
+[lib]
+name = "egui_network_status"
+path = "src/lib.rs"
+
+[[bin]]
+name = "egui_network_status"
+path = "src/main.rs"
+
 [dependencies]
 eframe = "0.25"
 crossbeam-channel = "0.5"
