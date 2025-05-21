@@ -10,19 +10,6 @@ use crossbeam_channel::unbounded;
 use std::net::TcpStream;
 use std::{thread, time::Duration};
 
-/// Starts a background thread that monitors internet connectivity.
-///
-/// Returns a `Receiver<bool>` channel that sends `true` when online,
-/// `false` when offline, **only when the status changes**.
-///
-/// # Example
-///
-/// ```
-/// use yo_netwatch::start_network_watcher;
-///
-/// let rx = start_network_watcher();
-/// // rx is crossbeam_channel::Receiver<bool>
-/// ```
 pub fn start_network_watcher() -> Receiver<bool> {
     let (tx, rx) = unbounded();
 
