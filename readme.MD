@@ -1,4 +1,4 @@
-[![Crates.io yo_netwatch](https://img.shields.io/crates/v/yo_netwatch.svg)](https://crates.io/crates/yo_netwatch)]
+[![Crates.io yo_netwatch](https://img.shields.io/crates/v/yo_netwatch.svg)](https://crates.io/crates/yo_netwatch)
 
 ----
 
