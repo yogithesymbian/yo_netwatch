@@ -13,10 +13,8 @@
 
 ## Installation
 
-Add to your `Cargo.toml`:
-
 ```toml
-yo_netwatch = "0.1"
+cargo install yo_netwatch
 ```
 
 ## Short Usage
